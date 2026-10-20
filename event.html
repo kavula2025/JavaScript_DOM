@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=p>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hello world</p>
+    <button id="btn">click me</button>
+</body>
+<script>
+    const paragraph = document.getElementById('para');
+
+    const button = document.getElementById('btn')
+
+    button.addEventListener('click', ()=>{
+        //alert("button clicked") it shows alert after an event to occur
+        //console.log("ame kilk button ") it shows output after click event
+        //document.body.style.backgroundColor="red";
+
+        //paragraph.createElement = "hellooo"
+        const paragraph = document.createElement('p');
+        paragraph.innerHTML="<h1>hellow world wide best officials</h1>";
+        document.body.appendChild(paragraph);
+    })
+</script>
+</html>

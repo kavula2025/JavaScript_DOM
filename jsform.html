@@ -1,0 +1,176 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        body{
+            background-color: aqua;
+            /* margin: 0; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+        #form-component{
+            /* display: flex;
+            flex-direction: column;
+            align-items: center; */
+            background-color: white;
+            padding: 60px;
+            margin: 35px;
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            border: 5px solid red;
+        }
+        #form-group{
+            display: flex;
+            flex-direction: column;
+        }
+        button{
+            color:white;
+            background-color:blue;
+            border-radius: 8px;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        input{
+            padding: 10px;
+            outline: none;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        input.error{
+            border:2px solid red;
+        }
+        input.valid{
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div id="form-component">
+        <form action="" id="form">
+            
+        <h1>Register Form</h1>
+
+        <div id="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="" id="name">
+        <small id="nameError"></small><br>
+
+        <label for="phone">Phone Number</label>
+        <input type="number" name="" id="phone" >
+        <small id="phoneError"></small><br>
+
+        <label for="email">Email</label>
+        <input type="text" name="" id="email">
+        <small id="emailError"></small><br>
+
+        <label for="password">Password</label>
+        <input type="password" name="" id="password">
+        <small id="passwordError"></small><br>  
+
+        <small id="para"></small>
+
+        <button type="submit">Register</button>
+    </div>
+        </form>
+    </div>
+</body>
+<script>
+    const form = document.getElementById("form");
+    const nameError = document.getElementById("nameError");
+    const phoneError = document.getElementById("phoneError");
+    const emailError = document.getElementById("emailError");
+    const passwordError = document.getElementById("passwordError");
+    // const para =document.getElementById("para");
+    const nameInput =document.getElementById("name");
+    const phoneInput =document.getElementById("phone");
+    const emailInput =document.getElementById("email");
+    const passwordInput =document.getElementById("password");
+    form.addEventListener("submit", (e)=>{
+    e.preventDefault();
+            
+    nameError.textContent="";
+    phoneError.textContent="";
+    emailError.textContent="";
+    passwordError.textContent="";
+    // para.textContent="";
+
+    const name = document.getElementById('name').value.trim();
+// alert(name);
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+//    console.log(name);
+//    console.log(number);
+//    console.log(mail);
+//    console.log(key);
+
+//    const employee ={
+//     name: name,
+//     email: email,
+//     phone: phone,
+//     password: password,
+//    } 
+//    console.log(employee);
+   
+        // if(!name || !phone || !email || !password ){
+        //     para.textContent="Please Fill All Fields";
+        //  }
+        // else{
+        //     alert("Form Submitted Successfully");
+        // }
+
+        
+        if(!name){
+            nameError.textContent="Name Is Required";
+            nameInput.classList.add("error");
+        }else{
+            nameInput.classList.remove('error');
+            nameInput.classList.add('valid');
+        }
+        if(!phone){
+            phoneError.textContent="Phone is required";
+            phoneInput.classList.add("error");
+        }else{
+            phoneInput.classList.remove('error');
+            phoneInput.classList.add('valid');
+        }
+        if(!email){
+            emailError.textContent="Email is required";
+            emailInput.classList.add("error");
+        }else{
+            emailInput.classList.remove('error');
+            emailInput.classList.add('valid');
+        }
+        if(!password){
+          passwordError.textContent="Password is required";
+          passwordInput.classList.add("error");
+        }else{
+            passwordInput.classList.remove('error');
+            passwordInput.classList.add('valid');
+        }
+        // } else {
+        //     alert("Form Submitted Successfully")
+        // }
+
+    // if(!name){
+    //     nameError.textContent="Jaza Jina Lako";
+    // }
+   
+//  else if(!password.includes("5")){
+//     alert("The Password Must Include Number 5");
+//    }
+
+//    if(!email.includes('@')){
+//     alert("Invalid Email");
+//    }
+
+    })
+</script>
+</html>

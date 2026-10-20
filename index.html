@@ -1,0 +1,51 @@
+   <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .toni{
+     color: white;
+     background-color: red;
+     margin: 10px;
+    }
+    </style>
+</head>
+<body>
+    <h1 id="header">HTML DOM</h1>
+    <h1 id="header1">HTML DOM</h1>
+    <h1 id="header">HTML DOM</h1>
+    <p id="para">Introduction To HTML DOM</p>
+
+    <div id="div" style="background-color: aqua; height: 50px; padding: 10px;">
+        <p>Hello World This Is HTML DOM</p>
+
+    </div>
+    <div class="toni"> We Are Open</div>
+    <div class="toni"> We Are Open</div>
+    <div class="toni"> We Are Open</div>
+    <p class="demo">We are Open</p>
+    <script>
+        const paragraph = document.getElementById('para').textContent="Hello World";
+        const me = document.getElementsByTagName('p')[0].innerHTML="Field";
+        const demo = document.getElementById('div').style.padding="5px";
+
+        //query selector
+        const element = document.querySelectorAll('#header');
+        element[0].style.color="red";
+         
+        //selecting single class
+        const easy = document.querySelector('#header1');
+        easy.style.color="blue";
+
+
+        const leiyoo = document.querySelectorAll('.toni');
+        leiyoo.forEach(toni=>{
+            toni.style.height="100px";
+            toni.style.backgroundColor="aqua";
+            toni.style.color="red";
+        })
+    </script>
+</body>
+
+</html>

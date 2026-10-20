@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form </title>
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div>
+        <div class="form-component"></div>
+        <form action="" id="form">
+            <h1>register</h1>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="name" name="" id="name" required>
+
+                <label for="password">password</label>
+                <input type="password" name="password" id="password" required>
+                <label for="email">email</label>
+                <input type="email"name="" id="email" required>
+
+            </div>
+            <button type="submit">register</button>
+        </form>
+    </div>
+    
+</body>
+<script>
+    const form = document.getElementById('form');
+    form.addEventListener('submit', (e)=>{
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+       console.logo(name);
+       console.logo(email);
+       console.logo(password);
+
+    //    if(!name || !email ||password){
+    //     alert("fomu haijajazwa freshi");
+    //    }
+
+       
+
+    //    if(password.length < 6){
+    //     alert("world wide");
+    //     }else{
+    //         alert("Good");
+    //   }
+    // if(!name){
+
+    //    alert("jaza jina lako")
+
+    //    }else if(!email){
+    //     alert("jaza email yako")
+    //    }else if(!password){
+    //     alert("jaza password")
+    //    }
+
+     })  
+</script>
+
+</html>

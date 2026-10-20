@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head">Html DOM</h1>
+    <p id="para">Introduction of Html DOM</p>
+    <h3>classic wwe website</h3>
+    <p class="demo"></p>
+    <h3 class="header">Our bootCamp</h3>
+    <h3 class="header">Our bootCamp</h3>
+    <h3 class="header">Our bootCamp</h3>
+
+    <p class="demo"> Our bootCamp</p>
+    <div id="div" style="background-color: blue; height: 100px; padding: 20px;">
+        <p>hello world</p>
+    </div>
+</body>
+<script>
+    const element1 = document.getElementById('head').innerHTML="HELLO WORLD";
+    const home = document.getElementById('para').textContent="watu poa kabisa";
+    const me =document.getElementsByTagName('p')[0].innerHTML="FIELD";
+    const demo=document.getElementById('div').style.padding="50px";
+    const demo1 = document.querySelectorAll('div')[1].style.color="white";
+</script>
+
+</html>
